@@ -31,4 +31,24 @@ class UsersController < ApplicationController
     the_user.save
     redirect_to("/users/" + my_input_username)
   end
+
+  def comments
+    Comment.where({:author_id => @the_user.id})
+  end
+
+  def photos
+    Photo.where({:owner_id => @the_user.id})
+  end
+
+  def likes
+    Like.where({:fan_id => @the_user.id})
+  end
+
+  def follow_requests
+    Follow_Request.where({:sender_id => @the_user.id})
+  end
+
+  def follow_receipts
+    Follow_Request.where({:recipient_id => @the_user.id})
+  end
 end

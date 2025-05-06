@@ -21,7 +21,7 @@
   </dd>
 </dl>
 
-<h2>Own photos (<%= @the_user.own_photos.count %>)</h2>
+<h2>Own photos (<%= @the_user.photos.count %>)</h2>
 
 <table border="1">
   <tr>
@@ -45,7 +45,7 @@
     </th>
   </tr>
 
-  <% @the_user.own_photos.each do |a_photo| %>
+  <% @the_user.photos.each do |a_photo| %>
 
     <tr>
       <td>

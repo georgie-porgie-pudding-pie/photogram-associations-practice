@@ -14,10 +14,9 @@
 
 class Photo < ApplicationRecord
   validates(:poster, { :presence => true })
-
-  # Association accessor methods to define:
   
   ## Direct associations
+  
 
   # Photo#poster: returns a row from the users table associated to this photo by the owner_id column
 
